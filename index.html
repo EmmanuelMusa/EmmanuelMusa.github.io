@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emmanuel Musa, machine learning and software engineer</title>
+  <meta name="description" content="Portfolio of Emmanuel Musa, a machine learning and software engineer in Toronto. Language models, speech and agents, with a neural network that trains live in your browser.">
+  <meta name="author" content="Emmanuel Musa">
+  <meta name="theme-color" content="#0c1926">
+  <meta name="color-scheme" content="dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Emmanuel Musa">
+  <meta property="og:title" content="Emmanuel Musa, machine learning and software engineer">
+  <meta property="og:description" content="I build machine learning systems and the software around them. Language models, speech and agents, built to run fast and to be checked.">
+  <meta property="og:url" content="https://emmanuelmusa.github.io/">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:image" content="https://emmanuelmusa.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Emmanuel Musa, machine learning and software engineer, beside a small neural network that has learned to separate two spirals of points.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://emmanuelmusa.github.io/assets/og.png">
+  <meta name="twitter:title" content="Emmanuel Musa, machine learning and software engineer">
+  <meta name="twitter:description" content="I build machine learning systems and the software around them. Language models, speech and agents, built to run fast and to be checked.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.className = 'js'</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the content</a>
+
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M1.5 1.5 8.5 5 1.5 8.5"/>
+      </marker>
+      <marker id="arrow-signal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M1.5 1.5 8.5 5 1.5 8.5"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <header class="site-head" id="site-head">
+    <div class="wrap head-row">
+      <a class="head-name" href="#top">Emmanuel Musa</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Sections</button>
+      <nav class="axis-nav" id="site-nav" aria-label="Sections">
+        <ol>
+          <li><a href="#about">About</a></li>
+          <li><a href="#ml">ML and AI</a></li>
+          <li><a href="#software">Software</a></li>
+          <li><a href="#management">Management</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+        <span class="axis-cursor" aria-hidden="true"></span>
+      </nav>
+    </div>
+    <div class="head-scale" aria-hidden="true"><span class="head-scale-cursor"></span></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- 1. Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="wrap hero-grid">
+        <div class="hero-id">
+          <p class="hero-role">Machine learning and software engineer<br>Toronto, Ontario, Canada</p>
+          <h1 id="hero-name"><span>Emmanuel</span> <span>Musa</span></h1>
+          <p class="hero-statement">I build machine learning systems and the software around them.</p>
+          <p class="hero-support">Language models, speech and agents, built to run fast and to be checked. Based in Toronto and studying for a Master of AI at Seneca Polytechnic.</p>
+          <ul class="hero-links">
+            <li>
+              <a class="link-out" href="https://www.linkedin.com/in/emmanuel-musa-935a59178/" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="4.9" cy="4.9" r="1" fill="currentColor"/><path d="M4.9 7.2v4.6M7.8 11.8V7.2M7.8 9.2c0-1.2.8-2 1.8-2s1.6.7 1.6 1.9v2.7" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="link-out" href="https://github.com/EmmanuelMusa" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub
+              </a>
+            </li>
+            <li><a class="link-in" href="#ml">Read the work</a></li>
+          </ul>
+        </div>
+
+        <figure class="fig run" id="run" aria-labelledby="run-title">
+          <div class="fig-head">
+            <p class="fig-label" id="run-title"><i>Fig. 1</i> Training run</p>
+            <div class="run-controls js-only">
+              <fieldset class="seg">
+                <legend class="sr-only">Dataset</legend>
+                <label><input type="radio" name="dataset" value="spirals" checked><span>spirals</span></label>
+                <label><input type="radio" name="dataset" value="rings"><span>rings</span></label>
+                <label><input type="radio" name="dataset" value="xor"><span>xor</span></label>
+              </fieldset>
+              <button class="btn" type="button" id="run-pause">Pause</button>
+              <button class="btn btn-key" type="button" id="run-restart">Restart</button>
+            </div>
+          </div>
+
+          <div class="run-body">
+            <div class="run-plot">
+              <canvas id="run-field" role="img" aria-label="Scatter plot of two classes of points. The shaded field behind them is the network's current guess for every position, and the bright line is its decision boundary.">The decision boundary plot needs a browser that supports canvas.</canvas>
+              <noscript>
+                <p class="run-fallback">This figure trains a small neural network while you watch. It needs JavaScript, which is switched off. With it on, you see two classes of points, the decision boundary forming between them and the loss falling.</p>
+              </noscript>
+            </div>
+            <div class="run-side">
+              <dl class="readouts" aria-live="off">
+                <div><dt>epoch</dt><dd id="run-epoch">0</dd></div>
+                <div><dt>loss</dt><dd id="run-loss">0.0000</dd></div>
+                <div><dt>accuracy</dt><dd id="run-acc">0.0%</dd></div>
+              </dl>
+              <div class="run-chart">
+                <canvas id="run-loss-chart" role="img" aria-label="Loss curve. Loss on a log scale against epoch. It falls as the network learns."></canvas>
+              </div>
+              <div class="run-weights">
+                <canvas id="run-net" role="img" aria-label="The network drawn as nodes and connections. Thicker lines are larger weights. Amber is positive and blue is negative."></canvas>
+              </div>
+              <p class="run-status js-only"><span id="run-status">starting</span><span id="run-seed"></span></p>
+            </div>
+          </div>
+          <p class="sr-only" id="run-summary" aria-live="polite"></p>
+
+          <figcaption>
+            A neural network learning to tell two classes of points apart. It has 2 inputs, two hidden layers of 8 tanh units and one sigmoid output, 105 parameters in all. It trains live in your browser with backpropagation written from scratch. No library.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2. About -->
+    <section class="section about" id="about" aria-labelledby="about-h">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <div class="about-grid">
+          <h2 id="about-h">About</h2>
+          <div class="about-text">
+            <p class="lede">I am a software and machine learning engineer with a bachelor's degree in Electrical and Electronics Engineering. I enjoy working out why a system is slow and fixing it.</p>
+            <p>At Seven Star Consultants that meant tuning PostgreSQL with indexing and query changes as the data grew. On n-gram language models it meant making them more efficient to run.</p>
+            <p>I also like building tools that other people depend on. I proposed and built an internal portal that was adopted across the company. It includes an agentic assistant that calls 17 tools to answer staff questions from live data, and a model layer that switches providers automatically when one fails.</p>
+            <p>I work mainly in Python, with some C, and use PyTorch, TensorFlow and scikit-learn.</p>
+            <aside class="now" aria-label="Now">
+              <h3>Now</h3>
+              <p>I am studying for a Master of Artificial Intelligence Design and Development at Seneca Polytechnic, Toronto (September 2026 to present). In my Master's I am training and tuning models such as linear regression and decision trees. I want to go deeper into how models run on hardware and how to make them faster.</p>
+            </aside>
+          </div>
+
+          <div class="about-table">
+            <table class="booktabs">
+              <caption><i>Table 1</i> Numbers from the work on this page</caption>
+              <thead>
+                <tr><th scope="col">Reading</th><th scope="col">What it measures</th><th scope="col">From</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="num">17</td>
+                  <td>tools called by the portal's agentic assistant</td>
+                  <td><a href="#portal-ai">Seven Star Portal</a></td>
+                </tr>
+                <tr>
+                  <td class="num">38 of 40</td>
+                  <td>answerable questions right in Ask JAMIE's test set, with 4 of 4 planted instructions resisted</td>
+                  <td><a href="#jamie">JAMIE</a></td>
+                </tr>
+                <tr>
+                  <td class="num">8.9 s to 2.3 s</td>
+                  <td>median Ask JAMIE answer time before and after tuning</td>
+                  <td><a href="#jamie">JAMIE</a></td>
+                </tr>
+                <tr>
+                  <td class="num">about 0.1 s</td>
+                  <td>wait after releasing the key in Speak Easy, however long the dictation</td>
+                  <td><a href="#speak-easy">Speak Easy</a></td>
+                </tr>
+                <tr>
+                  <td class="num">4.80 out of 5.0</td>
+                  <td>bachelor's grade</td>
+                  <td><a href="#experience">Landmark University</a></td>
+                </tr>
+                <tr>
+                  <td class="num">2021</td>
+                  <td>first machine learning role</td>
+                  <td><a href="#language-id">Huios Kinetics</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Machine learning and AI -->
+    <section class="section ml" id="ml" aria-labelledby="ml-h">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <header class="section-head">
+          <h2 id="ml-h">Machine learning and AI work</h2>
+          <p>Six entries, each written up as a short lab record.</p>
+        </header>
+
+        <!-- Entry: portal AI -->
+        <article class="entry" id="portal-ai" aria-labelledby="portal-ai-h">
+          <h3 class="entry-title" id="portal-ai-h">Agentic assistant and AI layer, Seven Star Portal</h3>
+          <div class="entry-meta">
+            <p class="status status-live"><span class="status-mark" aria-hidden="true"></span>In production</p>
+            <dl class="sheet">
+              <div><dt>Where</dt><dd>Seven-Star Consultants Limited</dd></div>
+              <div><dt>When</dt><dd>2023 to 2026</dd></div>
+              <div><dt>Role</dt><dd>Conceived, proposed and led the portal. Built its AI features.</dd></div>
+              <div><dt>Code</dt><dd>Private company code</dd></div>
+              <div><dt>Stack</dt><dd>
+                <ul class="stack">
+                  <li>PHP</li><li>SQLite</li><li>Google Gemini API</li><li>OpenAI-compatible APIs</li><li>Google Workspace (Drive, Meet, Calendar)</li>
+                </ul>
+              </dd></div>
+            </dl>
+          </div>
+          <div class="entry-body">
+            <p><b class="runin">Problem.</b> Staff needed answers from live portal data without digging through screens.</p>
+            <p><b class="runin">What I built.</b></p>
+            <ul class="points">
+              <li>An agentic assistant that uses function calling across 17 read-only tools to answer staff questions from live portal data.</li>
+              <li>A provider-agnostic model layer with Gemini and OpenAI-compatible adapters. It fails over automatically when a provider is down.</li>
+              <li>An RFP reader that pulls structured fields out of uploaded tender PDFs and checks them before they are used.</li>
+              <li>An LLM-based document classifier.</li>
+              <li>Automated tests for prompts, tool behaviour and output checks.</li>
+            </ul>
+          </div>
+          <figure class="fig entry-fig" id="fig-2">
+            <div class="fig-head"><p class="fig-label"><i>Fig. 2</i> The tool loop and the provider layer</p></div>
+            <div class="fig-canvas">
+              <svg class="dg dg-wide" viewBox="0 0 800 340" role="img" aria-labelledby="f2w-t f2w-d">
+                <title id="f2w-t">The agent tool loop and the provider layer</title>
+                <desc id="f2w-d">A staff question goes to the model. The model picks one of 17 read-only tools. The tool runs on live portal data and the result returns to the model, which then answers. The model is reached through a provider-agnostic layer with a Gemini adapter and an OpenAI-compatible adapter, with automatic failover between them.</desc>
+                <rect class="node" x="8" y="140" width="150" height="60" rx="2"/>
+                <text class="t" x="83" y="175" text-anchor="middle">Staff question</text>
+                <rect class="node node-key" x="250" y="140" width="190" height="60" rx="2"/>
+                <text class="t" x="345" y="167" text-anchor="middle">Model</text>
+                <text class="t-sub" x="345" y="185" text-anchor="middle">function calling</text>
+                <rect class="node" x="250" y="20" width="190" height="60" rx="2"/>
+                <text class="t" x="345" y="55" text-anchor="middle">17 read-only tools</text>
+                <rect class="node" x="560" y="20" width="190" height="60" rx="2"/>
+                <text class="t" x="655" y="55" text-anchor="middle">Live portal data</text>
+                <rect class="node" x="560" y="140" width="190" height="60" rx="2"/>
+                <text class="t" x="655" y="175" text-anchor="middle">Answer</text>
+                <path class="wire" d="M158 170H247"/>
+                <path class="wire" d="M440 170H557"/>
+                <path class="wire wire-key" d="M305 140V83"/>
+                <path class="wire wire-key" d="M385 80V137"/>
+                <path class="wire" d="M440 50H557"/>
+                <text class="t-note" x="296" y="114" text-anchor="end">picks a tool</text>
+                <text class="t-note" x="394" y="114">result returns</text>
+                <text class="t-note" x="499" y="41" text-anchor="middle">runs on</text>
+                <path class="wire wire-plain" d="M345 200V244"/>
+                <rect class="frame" x="150" y="244" width="600" height="88" rx="2"/>
+                <text class="t-note" x="164" y="264">Provider-agnostic model layer</text>
+                <rect class="node" x="164" y="276" width="200" height="42" rx="2"/>
+                <text class="t" x="264" y="302" text-anchor="middle">Gemini adapter</text>
+                <rect class="node" x="536" y="276" width="200" height="42" rx="2"/>
+                <text class="t" x="636" y="302" text-anchor="middle">OpenAI-compatible adapter</text>
+                <path class="wire wire-dash" d="M364 297H533"/>
+                <text class="t-note" x="449" y="288" text-anchor="middle">fails over automatically</text>
+              </svg>
+              <svg class="dg dg-tall" viewBox="0 0 340 590" role="img" aria-labelledby="f2t-t f2t-d">
+                <title id="f2t-t">The agent tool loop and the provider layer</title>
+                <desc id="f2t-d">A staff question goes to the model. The model picks one of 17 read-only tools. The tool runs on live portal data and the result returns to the model, which then answers. The model is reached through a provider-agnostic layer with a Gemini adapter and an OpenAI-compatible adapter, with automatic failover between them.</desc>
+                <rect class="node" x="10" y="8" width="140" height="48" rx="2"/>
+                <text class="t" x="80" y="37" text-anchor="middle">Staff question</text>
+                <rect class="node" x="190" y="8" width="140" height="48" rx="2"/>
+                <text class="t" x="260" y="37" text-anchor="middle">Answer</text>
+                <rect class="node node-key" x="40" y="110" width="240" height="56" rx="2"/>
+                <text class="t" x="160" y="135" text-anchor="middle">Model</text>
+                <text class="t-sub" x="160" y="153" text-anchor="middle">function calling</text>
+                <path class="wire" d="M80 56V107"/>
+                <path class="wire" d="M260 110V59"/>
+                <rect class="node" x="40" y="236" width="240" height="48" rx="2"/>
+                <text class="t" x="160" y="265" text-anchor="middle">17 read-only tools</text>
+                <path class="wire wire-key" d="M120 166V233"/>
+                <path class="wire wire-key" d="M200 236V169"/>
+                <text class="t-note" x="112" y="205" text-anchor="end">picks a tool</text>
+                <text class="t-note" x="208" y="205">result returns</text>
+                <path class="wire" d="M160 284V329"/>
+                <text class="t-note" x="168" y="311">runs on</text>
+                <rect class="node" x="40" y="332" width="240" height="48" rx="2"/>
+                <text class="t" x="160" y="361" text-anchor="middle">Live portal data</text>
+                <path class="wire wire-plain" d="M280 138H316V424"/>
+                <rect class="frame" x="10" y="424" width="320" height="158" rx="2"/>
+                <text class="t-note" x="24" y="445">Provider-agnostic model layer</text>
+                <rect class="node" x="24" y="456" width="292" height="40" rx="2"/>
+                <text class="t" x="170" y="481" text-anchor="middle">Gemini adapter</text>
+                <path class="wire wire-dash" d="M170 496V529"/>
+                <text class="t-note" x="180" y="517">fails over automatically</text>
+                <rect class="node" x="24" y="532" width="292" height="40" rx="2"/>
+                <text class="t" x="170" y="557" text-anchor="middle">OpenAI-compatible adapter</text>
+              </svg>
+            </div>
+            <figcaption>A question goes to the model, the model picks a tool, the read-only tool runs on live portal data and the result returns to the model, which answers. Below it, the provider layer with automatic failover.</figcaption>
+          </figure>
+        </article>
+
+        <!-- Entry: Speak Easy -->
+        <article class="entry" id="speak-easy" aria-labelledby="speak-easy-h">
+          <h3 class="entry-title" id="speak-easy-h">Speak Easy: local, offline dictation</h3>
+          <div class="entry-meta">
+            <p class="status status-open"><span class="status-mark" aria-hidden="true"></span>Public</p>
+            <dl class="sheet">
+              <div><dt>Kind</dt><dd>Personal project</dd></div>
+              <div><dt>Code</dt><dd><a class="link-out" href="https://github.com/EmmanuelMusa/speak-easy" target="_blank" rel="noopener">speak-easy on GitHub<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> (opens in a new tab)</span></a></dd></div>
+              <div><dt>Record</dt><dd>Python. 70 commits. 16 test files.</dd></div>
+              <div><dt>Stack</dt><dd>
+                <ul class="stack">
+                  <li>Python</li><li>faster-whisper</li><li>Silero VAD</li><li>Ollama</li><li>Parakeet TDT</li><li>PySide6</li><li>Win32 APIs</li>
+                </ul>
+              </dd></div>
+            </dl>
+          </div>
+          <div class="entry-body">
+            <p>A fully local dictation app for Windows. Hold a hotkey, speak, release, and cleaned text appears at the cursor in whatever app is focused. No cloud calls anywhere in the pipeline.</p>
+            <p><b class="runin">How it works.</b></p>
+            <ul class="points">
+              <li>Speech to text with faster-whisper, with Silero VAD gating silence. Runs on CUDA or CPU.</li>
+              <li>It transcribes while the key is held, so the wait after release stays at about 0.1 s no matter how long the dictation was.</li>
+              <li>A local LLM served by Ollama adds capitalisation and punctuation, formats dictated lists and resolves spoken self-corrections.</li>
+              <li>A divergence guard rejects any LLM output that paraphrases the speaker and delivers the verbatim text instead.</li>
+              <li>If Ollama is down or slow it falls back to a local clean-up, so dictation never blocks.</li>
+              <li>Parakeet TDT is an optional second speech engine.</li>
+            </ul>
+            <p><b class="runin">Learning from corrections.</b></p>
+            <ul class="points">
+              <li>Corrections most relevant to the current dictation are ranked with TF-IDF and added to the clean-up prompt as examples.</li>
+              <li>Misheard names and jargon go into a learned vocabulary.</li>
+              <li>Audio and transcript pairs are saved as a dataset for a later LoRA fine-tune of Whisper to the speaker's voice.</li>
+            </ul>
+          </div>
+          <figure class="fig entry-fig" id="fig-3">
+            <div class="fig-head"><p class="fig-label"><i>Fig. 3</i> The dictation pipeline</p></div>
+            <div class="fig-canvas">
+              <svg class="dg dg-wide" viewBox="0 0 800 368" role="img" aria-labelledby="f3w-t f3w-d">
+                <title id="f3w-t">The Speak Easy dictation pipeline</title>
+                <desc id="f3w-d">Holding the hotkey opens the microphone. Silero VAD and Whisper turn speech into text while the key is held. A local LLM served by Ollama cleans the text up, and a divergence guard rejects a paraphrase and delivers the verbatim text. If Ollama is down or slow, a local clean-up is used. The text appears at the cursor. Corrections feed three things: few-shot examples ranked with TF-IDF and added to the clean-up prompt, a learned vocabulary, and a voice dataset for a later LoRA fine-tune of Whisper.</desc>
+                <rect class="node" x="4" y="64" width="100" height="60" rx="2"/>
+                <text class="t" x="54" y="99" text-anchor="middle">Hold hotkey</text>
+                <rect class="node" x="128" y="64" width="100" height="60" rx="2"/>
+                <text class="t" x="178" y="99" text-anchor="middle">Microphone</text>
+                <rect class="node" x="252" y="64" width="180" height="60" rx="2"/>
+                <text class="t" x="342" y="90" text-anchor="middle">VAD and Whisper</text>
+                <text class="t-sub" x="342" y="108" text-anchor="middle">runs while the key is held</text>
+                <rect class="node node-key" x="456" y="52" width="180" height="84" rx="2"/>
+                <text class="t" x="546" y="78" text-anchor="middle">LLM clean-up</text>
+                <text class="t-sub" x="546" y="95" text-anchor="middle">local, served by Ollama</text>
+                <path class="divide" d="M456 106H636"/>
+                <text class="t-sub t-key" x="546" y="125" text-anchor="middle">divergence guard</text>
+                <rect class="node" x="660" y="64" width="136" height="60" rx="2"/>
+                <text class="t" x="728" y="99" text-anchor="middle">Text at cursor</text>
+                <path class="wire" d="M104 94H125"/>
+                <path class="wire" d="M228 94H249"/>
+                <path class="wire" d="M432 94H453"/>
+                <path class="wire" d="M636 94H657"/>
+                <path class="wire wire-dash" d="M342 64V24H728V61"/>
+                <text class="t-note" x="535" y="16" text-anchor="middle">if Ollama is down or slow, a local clean-up runs</text>
+                <text class="t-note" x="494" y="156">guard rejects a paraphrase</text>
+                <text class="t-note" x="494" y="170">and delivers verbatim text</text>
+                <rect class="node" x="660" y="250" width="136" height="56" rx="2"/>
+                <text class="t" x="728" y="283" text-anchor="middle">Corrections</text>
+                <rect class="node" x="456" y="250" width="180" height="56" rx="2"/>
+                <text class="t" x="546" y="274" text-anchor="middle">Few-shot examples</text>
+                <text class="t-sub" x="546" y="292" text-anchor="middle">ranked with TF-IDF</text>
+                <rect class="node" x="252" y="250" width="180" height="56" rx="2"/>
+                <text class="t" x="342" y="274" text-anchor="middle">Voice dataset</text>
+                <text class="t-sub" x="342" y="292" text-anchor="middle">audio and transcript pairs</text>
+                <rect class="node" x="36" y="250" width="192" height="56" rx="2"/>
+                <text class="t" x="132" y="274" text-anchor="middle">Learned vocabulary</text>
+                <text class="t-sub" x="132" y="292" text-anchor="middle">misheard names and jargon</text>
+                <path class="wire" d="M728 124V247"/>
+                <path class="wire" d="M728 306V336H546V309"/>
+                <path class="wire" d="M546 336H342V309"/>
+                <path class="wire" d="M342 336H132V309"/>
+                <text class="t-note" x="437" y="356" text-anchor="middle">corrections feed all three</text>
+                <path class="wire wire-key" d="M476 250V139"/>
+                <text class="t-note" x="486" y="214">added to the clean-up prompt</text>
+                <path class="wire wire-dash" d="M342 250V127"/>
+                <text class="t-note" x="332" y="200" text-anchor="end">for a later LoRA fine-tune</text>
+              </svg>
+              <svg class="dg dg-tall" viewBox="0 0 340 734" role="img" aria-labelledby="f3t-t f3t-d">
+                <title id="f3t-t">The Speak Easy dictation pipeline</title>
+                <desc id="f3t-d">Holding the hotkey opens the microphone. Silero VAD and Whisper turn speech into text while the key is held. A local LLM served by Ollama cleans the text up, and a divergence guard rejects a paraphrase and delivers the verbatim text. If Ollama is down or slow, a local clean-up is used. The text appears at the cursor. Corrections feed three things: few-shot examples ranked with TF-IDF and added to the clean-up prompt, a learned vocabulary, and a voice dataset for a later LoRA fine-tune of Whisper.</desc>
+                <rect class="node" x="10" y="8" width="196" height="44" rx="2"/>
+                <text class="t" x="108" y="35" text-anchor="middle">Hold hotkey</text>
+                <path class="wire" d="M108 52V75"/>
+                <rect class="node" x="10" y="78" width="196" height="44" rx="2"/>
+                <text class="t" x="108" y="105" text-anchor="middle">Microphone</text>
+                <path class="wire" d="M108 122V147"/>
+                <rect class="node" x="10" y="150" width="196" height="56" rx="2"/>
+                <text class="t" x="108" y="174" text-anchor="middle">VAD and Whisper</text>
+                <text class="t-sub" x="108" y="192" text-anchor="middle">runs while the key is held</text>
+                <path class="wire" d="M108 206V231"/>
+                <rect class="node node-key" x="10" y="234" width="196" height="112" rx="2"/>
+                <text class="t" x="108" y="258" text-anchor="middle">LLM clean-up</text>
+                <text class="t-sub" x="108" y="275" text-anchor="middle">local, served by Ollama</text>
+                <path class="divide" d="M10 287H206"/>
+                <text class="t-sub t-key" x="108" y="306" text-anchor="middle">divergence guard</text>
+                <text class="t-sub" x="108" y="321" text-anchor="middle">rejects a paraphrase,</text>
+                <text class="t-sub" x="108" y="335" text-anchor="middle">delivers verbatim text</text>
+                <path class="wire" d="M108 346V371"/>
+                <rect class="node" x="10" y="374" width="196" height="44" rx="2"/>
+                <text class="t" x="108" y="401" text-anchor="middle">Text at cursor</text>
+                <path class="wire wire-dash" d="M206 178H228V396H209"/>
+                <text class="t-sub" x="238" y="270">if Ollama is down</text>
+                <text class="t-sub" x="238" y="284">or slow, a local</text>
+                <text class="t-sub" x="238" y="298">clean-up runs</text>
+                <path class="wire" d="M108 418V451"/>
+                <rect class="node" x="10" y="454" width="196" height="44" rx="2"/>
+                <text class="t" x="108" y="481" text-anchor="middle">Corrections</text>
+                <path class="wire" d="M24 498V546H41"/>
+                <path class="wire" d="M24 546V614H41"/>
+                <path class="wire" d="M24 614V688H41"/>
+                <rect class="node" x="44" y="522" width="286" height="50" rx="2"/>
+                <text class="t" x="58" y="543">Few-shot examples</text>
+                <text class="t-sub" x="58" y="560">ranked with TF-IDF, added to the prompt</text>
+                <rect class="node" x="44" y="590" width="286" height="50" rx="2"/>
+                <text class="t" x="58" y="611">Learned vocabulary</text>
+                <text class="t-sub" x="58" y="628">misheard names and jargon</text>
+                <rect class="node" x="44" y="658" width="286" height="66" rx="2"/>
+                <text class="t" x="58" y="679">Voice dataset</text>
+                <text class="t-sub" x="58" y="696">audio and transcript pairs,</text>
+                <text class="t-sub" x="58" y="710">for a later LoRA fine-tune of Whisper</text>
+              </svg>
+            </div>
+            <figcaption>Hold the hotkey, speak, release. Speech becomes text while the key is still held, a local LLM cleans it up under a divergence guard, and the text lands at the cursor. The lower loop shows where corrections go.</figcaption>
+          </figure>
+        </article>
+
+        <!-- Entry: JAMIE -->
+        <article class="entry" id="jamie" aria-labelledby="jamie-h">
+          <h3 class="entry-title" id="jamie-h">JAMIE: local AI over your own job search</h3>
+          <div class="entry-meta">
+            <p class="status status-dev"><span class="status-mark" aria-hidden="true"></span>In development</p>
+            <dl class="sheet">
+              <div><dt>Kind</dt><dd>Personal project</dd></div>
+              <div><dt>Code</dt><dd>Private for now</dd></div>
+              <div><dt>Home page</dt><dd><a class="link-out" href="https://emmanuelmusa.github.io/jamie-site/" target="_blank" rel="noopener">JAMIE home page<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> (opens in a new tab)</span></a></dd></div>
+              <div><dt>Record</dt><dd>307 commits. Runs models locally through Ollama. Has a written threat model.</dd></div>
+              <div><dt>Stack</dt><dd>
+                <ul class="stack">
+                  <li>TypeScript</li><li>Rust</li><li>Tauri v2</li><li>Bun</li><li>Hono</li><li>SQLite</li><li>Ollama</li><li>a browser extension</li><li>Playwright</li>
+                </ul>
+              </dd></div>
+            </dl>
+          </div>
+          <div class="entry-body">
+            <p>JAMIE stands for Job Application Management and Information Enterprise. It is a local-first desktop app that tracks job applications, shows how the search is going and gives honest insights. Everything stays on the user's computer.</p>
+            <p><b class="runin">The AI parts.</b></p>
+            <ul class="points">
+              <li><b>Email sorting.</b> A local model decides which Gmail messages are about the user's applications. Gmail access is read-only.</li>
+              <li><b>Ask JAMIE.</b> A chat that answers questions about your applications. The model writes lookup requests. JAMIE runs them on a read-only database connection. An answer check then backs every number, date and status word with the data before the answer is shown.</li>
+              <li><b>Evaluation.</b> A fixed test set of questions against a made-up job search. It includes questions with known answers, questions that cannot be answered and emails carrying planted instructions.</li>
+              <li><b>Model choice.</b> Two local models were compared on the same gate before one became the default.</li>
+            </ul>
+            <div class="results" role="group" aria-label="Ask JAMIE results">
+              <p class="results-title"><b class="runin">Result.</b></p>
+              <dl class="results-grid">
+                <div><dt>answerable questions right</dt><dd>38 of 40</dd></div>
+                <div><dt>planted instructions resisted</dt><dd>4 of 4</dd></div>
+              </dl>
+              <div class="bars">
+                <p class="bars-title">Median answer time</p>
+                <div class="bar-row"><span class="bar-name">before tuning</span><span class="bar-track"><span class="bar bar-before"></span></span><span class="bar-val">8.9 s</span></div>
+                <div class="bar-row"><span class="bar-name">after tuning</span><span class="bar-track"><span class="bar bar-after"></span></span><span class="bar-val">2.3 s</span></div>
+                <p class="bars-note">Tuning meant turning off hidden reasoning, keeping the model loaded and warming it when the chat opens.</p>
+              </div>
+            </div>
+          </div>
+          <figure class="fig entry-fig" id="fig-4">
+            <div class="fig-head"><p class="fig-label"><i>Fig. 4</i> The Ask JAMIE answer check</p></div>
+            <div class="fig-canvas">
+              <svg class="dg dg-wide" viewBox="0 0 800 262" role="img" aria-labelledby="f4w-t f4w-d">
+                <title id="f4w-t">The Ask JAMIE answer check</title>
+                <desc id="f4w-d">A question goes to the model. The model writes a lookup. JAMIE runs it on a read-only connection to the database. The answer check compares each number, date and status word with the data. If all are backed, the answer is shown. If not, a plain list is shown as a fallback.</desc>
+                <rect class="node" x="4" y="96" width="108" height="60" rx="2"/>
+                <text class="t" x="58" y="131" text-anchor="middle">Question</text>
+                <rect class="node" x="138" y="96" width="162" height="60" rx="2"/>
+                <text class="t" x="219" y="122" text-anchor="middle">Model</text>
+                <text class="t-sub" x="219" y="140" text-anchor="middle">writes a lookup</text>
+                <rect class="node" x="326" y="96" width="168" height="60" rx="2"/>
+                <text class="t" x="410" y="122" text-anchor="middle">JAMIE runs it</text>
+                <text class="t-sub" x="410" y="140" text-anchor="middle">read-only connection</text>
+                <rect class="node node-key" x="520" y="96" width="148" height="60" rx="2"/>
+                <text class="t" x="594" y="122" text-anchor="middle">Answer check</text>
+                <text class="t-sub" x="594" y="140" text-anchor="middle">compares with the data</text>
+                <path class="wire" d="M112 126H135"/>
+                <path class="wire" d="M300 126H323"/>
+                <path class="wire" d="M494 126H517"/>
+                <rect class="node" x="694" y="28" width="102" height="56" rx="2"/>
+                <text class="t" x="745" y="61" text-anchor="middle">Answer</text>
+                <rect class="node" x="694" y="168" width="102" height="56" rx="2"/>
+                <text class="t" x="745" y="192" text-anchor="middle">Plain list</text>
+                <text class="t-sub" x="745" y="209" text-anchor="middle">fallback</text>
+                <path class="wire wire-key" d="M668 116H681V56H691"/>
+                <path class="wire" d="M668 136H681V196H691"/>
+                <text class="t-note" x="745" y="18" text-anchor="middle">all backed</text>
+                <path class="db" d="M350 196v36c0 5 27 9 60 9s60-4 60-9v-36"/>
+                <ellipse class="db" cx="410" cy="196" rx="60" ry="9"/>
+                <text class="t-sub" x="410" y="228" text-anchor="middle">database</text>
+                <path class="wire" d="M410 156V184"/>
+                <path class="wire wire-dot" d="M470 212H594V159"/>
+                <text class="t-note" x="482" y="230">numbers, dates and status</text>
+                <text class="t-note" x="482" y="244">words checked against it</text>
+                <text class="t-note" x="745" y="242" text-anchor="middle">not backed</text>
+              </svg>
+              <svg class="dg dg-tall" viewBox="0 0 340 456" role="img" aria-labelledby="f4t-t f4t-d">
+                <title id="f4t-t">The Ask JAMIE answer check</title>
+                <desc id="f4t-d">A question goes to the model. The model writes a lookup. JAMIE runs it on a read-only connection to the database. The answer check compares each number, date and status word with the data. If all are backed, the answer is shown. If not, a plain list is shown as a fallback.</desc>
+                <rect class="node" x="10" y="8" width="200" height="44" rx="2"/>
+                <text class="t" x="110" y="35" text-anchor="middle">Question</text>
+                <path class="wire" d="M110 52V77"/>
+                <rect class="node" x="10" y="80" width="200" height="56" rx="2"/>
+                <text class="t" x="110" y="104" text-anchor="middle">Model</text>
+                <text class="t-sub" x="110" y="122" text-anchor="middle">writes a lookup</text>
+                <path class="wire" d="M110 136V161"/>
+                <rect class="node" x="10" y="164" width="200" height="56" rx="2"/>
+                <text class="t" x="110" y="188" text-anchor="middle">JAMIE runs it</text>
+                <text class="t-sub" x="110" y="206" text-anchor="middle">read-only connection</text>
+                <path class="wire" d="M210 192H241"/>
+                <path class="db" d="M244 176v34c0 4 19 7 43 7s43-3 43-7v-34"/>
+                <ellipse class="db" cx="287" cy="176" rx="43" ry="7"/>
+                <text class="t-sub" x="287" y="205" text-anchor="middle">database</text>
+                <path class="wire" d="M110 220V261"/>
+                <rect class="node node-key" x="10" y="264" width="200" height="72" rx="2"/>
+                <text class="t" x="110" y="288" text-anchor="middle">Answer check</text>
+                <text class="t-sub" x="110" y="306" text-anchor="middle">numbers, dates and status words</text>
+                <text class="t-sub" x="110" y="320" text-anchor="middle">compared with the data</text>
+                <path class="wire wire-dot" d="M287 218V300H213"/>
+                <path class="wire wire-key" d="M110 336V362H85V397"/>
+                <path class="wire" d="M110 336V362H255V397"/>
+                <text class="t-note" x="77" y="386" text-anchor="end">all backed</text>
+                <text class="t-note" x="263" y="386">not backed</text>
+                <rect class="node" x="10" y="400" width="150" height="46" rx="2"/>
+                <text class="t" x="85" y="428" text-anchor="middle">Answer</text>
+                <rect class="node" x="180" y="400" width="150" height="46" rx="2"/>
+                <text class="t" x="255" y="428" text-anchor="middle">Plain list fallback</text>
+              </svg>
+            </div>
+            <figcaption>The model writes a lookup, JAMIE runs it read-only, and the answer check compares each number and date to the data. The user then gets either the answer or a plain list fallback.</figcaption>
+          </figure>
+        </article>
+
+        <!-- Entry: next-word prediction -->
+        <article class="entry" id="next-word" aria-labelledby="next-word-h">
+          <h3 class="entry-title" id="next-word-h">Next-word prediction</h3>
+          <div class="entry-meta">
+            <dl class="sheet">
+              <div><dt>Where</dt><dd>Logitronic Systems Limited</dd></div>
+              <div><dt>Role</dt><dd>Machine Learning Engineer</dd></div>
+              <div><dt>When</dt><dd>May 2022 to December 2022</dd></div>
+              <div><dt>Stack</dt><dd>
+                <ul class="stack">
+                  <li>Python</li><li>TensorFlow</li><li>Keras</li><li>scikit-learn</li><li>NLTK</li><li>Git</li>
+                </ul>
+              </dd></div>
+            </dl>
+          </div>
+          <div class="entry-body">
+            <ul class="points">
+              <li>Developed a next-word prediction system using NLP and machine learning to improve typing prediction.</li>
+              <li>Gathered and cleaned large datasets. Applied tokenization, stop-word removal, stemming and lemmatization.</li>
+              <li>Developed and evaluated n-gram language models using accuracy, precision, recall and F1-score. Improved both accuracy and computational efficiency.</li>
+              <li>Documented preprocessing, training and evaluation, and presented findings in reports and presentations.</li>
+            </ul>
+          </div>
+          <figure class="fig entry-fig predictor" id="predictor" aria-labelledby="predictor-title">
+            <div class="fig-head">
+              <p class="fig-label" id="predictor-title"><i>Fig. 5</i> Next-word predictor</p>
+              <p class="fig-meta js-only" id="predictor-stats">training on this page</p>
+            </div>
+            <div class="predictor-body js-only">
+              <label class="predictor-label" for="predictor-input">Type a few words and the model suggests the next one</label>
+              <div class="predictor-field">
+                <input id="predictor-input" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="for example: the model" aria-describedby="predictor-help predictor-mode">
+                <button class="btn" type="button" id="predictor-clear">Clear</button>
+              </div>
+              <p class="predictor-mode" id="predictor-mode">Most frequent words on this page</p>
+              <div class="suggestions" id="predictor-suggestions" role="group" aria-label="Suggested words">
+                <button type="button" class="suggestion" disabled><span class="s-word"></span><span class="s-meter"><span></span></span><span class="s-info"><span class="s-p"></span><span class="s-order"></span></span></button>
+                <button type="button" class="suggestion" disabled><span class="s-word"></span><span class="s-meter"><span></span></span><span class="s-info"><span class="s-p"></span><span class="s-order"></span></span></button>
+                <button type="button" class="suggestion" disabled><span class="s-word"></span><span class="s-meter"><span></span></span><span class="s-info"><span class="s-p"></span><span class="s-order"></span></span></button>
+              </div>
+              <p class="predictor-help" id="predictor-help">Click a suggestion to add it. With a keyboard, press the down arrow to reach the suggestions, then Enter to add one. Each suggestion shows its probability and whether a trigram, bigram or unigram produced it.</p>
+            </div>
+            <noscript>
+              <p class="run-fallback">This demo needs JavaScript, which is switched off. With it on, a small n-gram model trains on the text of this page and suggests the next word as you type.</p>
+            </noscript>
+            <figcaption>A small n-gram model built for this page and trained on its own text. It is not the Logitronic system.</figcaption>
+          </figure>
+        </article>
+
+        <!-- Entries: language identification and intent chatbot -->
+        <div class="entry-pair">
+          <article class="entry entry-short" id="language-id" aria-labelledby="language-id-h">
+            <h3 class="entry-title" id="language-id-h">Identifying African languages in text</h3>
+            <div class="entry-meta">
+              <dl class="sheet">
+                <div><dt>Where</dt><dd>Huios Kinetics</dd></div>
+                <div><dt>Role</dt><dd>Machine Learning Engineer</dd></div>
+                <div><dt>When</dt><dd>February 2021 to April 2022</dd></div>
+                <div><dt>Stack</dt><dd>
+                  <ul class="stack">
+                    <li>Python</li><li>scikit-learn</li><li>TensorFlow</li><li>NLTK</li>
+                  </ul>
+                </dd></div>
+              </dl>
+            </div>
+            <div class="entry-body">
+              <ul class="points">
+                <li>Researched machine learning techniques for identifying African languages in text.</li>
+                <li>Compared Naive Bayes, Support Vector Machines and neural networks on accuracy, precision, recall and F1-score.</li>
+                <li>Studied feature extraction for language identification: n-grams, character-level embeddings and tokenization methods, and their effect on performance and computational cost.</li>
+              </ul>
+              <p class="langs-title">Languages gathered for the work</p>
+              <ul class="langs">
+                <li>Igbo</li><li>Yoruba</li><li>Hausa</li><li>Swahili</li><li>Twi</li><li>Lingala</li><li>Afrikaans</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="entry entry-short" id="intent-chatbot" aria-labelledby="intent-chatbot-h">
+            <h3 class="entry-title" id="intent-chatbot-h">Intent chatbot in PyTorch</h3>
+            <div class="entry-meta">
+              <p class="status status-open"><span class="status-mark" aria-hidden="true"></span>Public</p>
+              <dl class="sheet">
+                <div><dt>Where</dt><dd>Demo for Seven Star Consultants' website</dd></div>
+                <div><dt>Code</dt><dd><a class="link-out" href="https://github.com/EmmanuelMusa/Seven-Star-Chatbot" target="_blank" rel="noopener">github.com/EmmanuelMusa/Seven-Star-Chatbot<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> (opens in a new tab)</span></a></dd></div>
+                <div><dt>Stack</dt><dd>
+                  <ul class="stack">
+                    <li>Python</li><li>PyTorch</li><li>NLTK</li><li>Flask</li>
+                  </ul>
+                </dd></div>
+              </dl>
+            </div>
+            <div class="entry-body">
+              <p>A chatbot that classifies what a visitor is asking and replies from company information.</p>
+              <ul class="points">
+                <li>A feed-forward network in PyTorch with three linear layers and ReLU.</li>
+                <li>Input is a bag of words built with NLTK tokenization and stemming.</li>
+                <li>Trained on 16 intents and 114 example phrases.</li>
+                <li>Served with Flask inside the company site's front end.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Software engineering -->
+    <section class="section software" id="software" aria-labelledby="software-h">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <header class="section-head">
+          <h2 id="software-h">Software engineering</h2>
+          <p>Backends, platforms and sites.</p>
+        </header>
+
+        <div class="ledger">
+          <article class="item">
+            <h3>National Home-Grown School Feeding Programme</h3>
+            <p class="item-for">For NSIPA, Federal Ministry of Humanitarian Affairs, Nigeria. Agriculture and food security.</p>
+            <p>Designed and built a secure, scalable backend for real-time tracking, workflows and role-based management of aggregators, smallholder farmers, suppliers and programme administrators across the national supply chain.</p>
+            <ul class="stack"><li>Python</li><li>Django</li><li>PostgreSQL</li><li>Docker</li><li>AWS</li></ul>
+            <p class="item-note">Code is private.</p>
+          </article>
+
+          <article class="item">
+            <h3>Snacks for Thoughts</h3>
+            <p>A platform for supporting verified school breakfast programmes in Nigeria. Donors pick a school, give, and track where the contribution goes. It has dashboards for donors, states, suppliers and verifiers, and a public transparency page.</p>
+            <ul class="stack"><li>TypeScript</li><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Recharts</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li></ul>
+            <p class="item-note">80 commits.</p>
+            <ul class="item-links">
+              <li><a class="link-out" href="https://snacksforthoughts.vercel.app" target="_blank" rel="noopener">Live site<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> for Snacks for Thoughts (opens in a new tab)</span></a></li>
+              <li><a class="link-out" href="https://github.com/EmmanuelMusa/snacksforthoughts" target="_blank" rel="noopener">Code<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> for Snacks for Thoughts (opens in a new tab)</span></a></li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <h3>Agro value chain platform</h3>
+            <p class="item-for">For Seven Star Consultants. Agriculture.</p>
+            <p>Designed and built the backend, including RESTful APIs that connect the frontend with external systems. Built secure sign-in and access control for different roles, including customers, farmers, storage companies and logistics providers. Built email services for user verification and communication.</p>
+            <ul class="stack"><li>Python</li><li>REST APIs</li><li>Docker</li></ul>
+            <p class="item-note">Code is private.</p>
+          </article>
+
+          <article class="item">
+            <h3>Seven Star Portal, the platform itself</h3>
+            <p class="item-for">In production. Private company code.</p>
+            <p>A self-initiated internal staff operations platform, adopted across the company. It centralised workflow automation, document and knowledge management, credential storage, project coordination, role-based access control, chat and audit logging.</p>
+            <p>Built in PHP with SQLite and integrated with Google Workspace (Drive, Meet and Calendar).</p>
+            <ul class="stack"><li>PHP</li><li>SQLite</li><li>Google Workspace</li></ul>
+          </article>
+
+          <article class="item">
+            <h3>Databases and cloud</h3>
+            <p>Managed and tuned the PostgreSQL databases behind these platforms with indexing, normalization and query optimization, to keep storage and queries fast as programme data grew.</p>
+            <p>Deployed backend services on AWS EC2 and frontends on AWS Amplify.</p>
+            <ul class="stack"><li>PostgreSQL</li><li>AWS EC2</li><li>AWS Amplify</li></ul>
+          </article>
+
+          <article class="item">
+            <h3>LearnSmarta Academy</h3>
+            <p>A website for a youth development organisation, with programme pages, a registration flow and a built-in FAQ chatbot that matches questions by string similarity.</p>
+            <ul class="stack"><li>React</li><li>Tailwind CSS</li><li>Django</li></ul>
+            <ul class="item-links">
+              <li><a class="link-out" href="https://github.com/EmmanuelMusa/LearnSmarta-Academy" target="_blank" rel="noopener">Code<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> for LearnSmarta Academy (opens in a new tab)</span></a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Project management -->
+    <section class="section management" id="management" aria-labelledby="management-h">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <header class="section-head">
+          <h2 id="management-h">Project management</h2>
+        </header>
+
+        <article class="pm" aria-labelledby="pm-h">
+          <div class="pm-lead">
+            <h3 id="pm-h">NRC NGO Support Hub</h3>
+            <p>For the Norwegian Refugee Council, with PLRCAP and NORCAP. A humanitarian, donor-funded knowledge platform.</p>
+            <p class="pm-role">Project manager from initiation to final delivery.</p>
+          </div>
+          <div class="pm-grid">
+            <div>
+              <h4>What I owned</h4>
+              <p>Requirements gathering, project planning, timelines and day-to-day operations. Coordinated NRC, PLRCAP, NORCAP and partner stakeholders. Directed the development team through a complete, multi-phase rebuild of the platform from scratch.</p>
+            </div>
+            <div>
+              <h4>What was delivered</h4>
+              <ul class="points">
+                <li>A resource-library search engine</li>
+                <li>Embedded webinars</li>
+                <li>Partner-website integrations</li>
+                <li>A Communities of Practice mobile application</li>
+                <li>A training-achievement dashboard</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Hands-on too</h4>
+              <p>Deployment and hosting, the GitHub repository and release workflow, back-end services, programme data structure, and database health and performance.</p>
+            </div>
+            <div>
+              <h4>Close-out</h4>
+              <p>Quality assurance, technical documentation and knowledge transfer to the client's administrators.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. Experience and education -->
+    <section class="section experience" id="experience" aria-labelledby="experience-h">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <header class="section-head">
+          <h2 id="experience-h">Experience and education</h2>
+          <p class="legend"><span class="mark mark-work" aria-hidden="true"></span>work <span class="mark mark-study" aria-hidden="true"></span>study</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="t-row t-study">
+            <p class="t-when">September 2026 to present</p>
+            <div class="t-what">
+              <h3>Seneca Polytechnic, Toronto</h3>
+              <p>Master of Artificial Intelligence Design and Development.</p>
+            </div>
+          </li>
+          <li class="t-row t-work">
+            <p class="t-when">January 2023 to August 2026</p>
+            <div class="t-what">
+              <h3>Seven-Star Consultants Limited</h3>
+              <p>Software Engineer.</p>
+            </div>
+          </li>
+          <li class="t-row t-work">
+            <p class="t-when">May 2022 to December 2022</p>
+            <div class="t-what">
+              <h3>Logitronic Systems Limited</h3>
+              <p>Machine Learning Engineer.</p>
+            </div>
+          </li>
+          <li class="t-row t-work">
+            <p class="t-when">February 2021 to April 2022</p>
+            <div class="t-what">
+              <h3>Huios Kinetics</h3>
+              <p>Machine Learning Engineer.</p>
+            </div>
+          </li>
+          <li class="t-row t-study">
+            <p class="t-when">November 2020</p>
+            <div class="t-what">
+              <h3>Landmark University, Nigeria</h3>
+              <p>Bachelor of Engineering, Electrical and Electronics Engineering. 4.80 out of 5.0.</p>
+            </div>
+          </li>
+          <li class="t-row t-work">
+            <p class="t-when">February 2019 to August 2019</p>
+            <div class="t-what">
+              <h3>Abuja Electricity Distribution Company</h3>
+              <p>Python Engineer (Intern). Developed Python automation for network monitoring, alerting and contact-list consolidation.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7. Skills and certifications -->
+    <section class="section skills" id="skills" aria-labelledby="skills-h">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <header class="section-head">
+          <h2 id="skills-h">Skills and certifications</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-group skill-lead">
+            <h3>AI and ML</h3>
+            <ul>
+              <li>PyTorch</li>
+              <li>TensorFlow</li>
+              <li>Keras</li>
+              <li>scikit-learn</li>
+              <li>NLTK</li>
+              <li>Agentic workflows with function calling and tool integration</li>
+              <li>LLM application development (Google Gemini API, OpenAI-compatible APIs)</li>
+              <li>Model evaluation and optimization</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>C</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>HTML and CSS</li>
+              <li>MATLAB</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Systems and performance</h3>
+            <ul>
+              <li>PostgreSQL performance tuning (indexing, query optimization)</li>
+              <li>Linux</li>
+              <li>AWS (EC2, Amplify)</li>
+              <li>Git and GitHub</li>
+              <li>Automated testing</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Backend and data</h3>
+            <ul>
+              <li>Django</li>
+              <li>RESTful API design</li>
+              <li>System integration</li>
+              <li>MySQL</li>
+              <li>SQLite</li>
+              <li>Role-based access control</li>
+              <li>Pandas</li>
+              <li>Matplotlib</li>
+              <li>Seaborn</li>
+              <li>Power BI</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Also</h3>
+            <ul>
+              <li>Interactive dashboards and internal tools</li>
+              <li>Technical documentation and knowledge transfer</li>
+              <li>Project management and stakeholder coordination</li>
+            </ul>
+          </div>
+          <div class="skill-group skill-certs">
+            <h3>Certifications</h3>
+            <ul>
+              <li>Machine Learning Foundations: A Case Study Approach <span class="cert-by">University of Washington</span></li>
+              <li>Introduction to AI, Robotics, and Data <span class="cert-by">Global AI Hub</span></li>
+              <li>Google Data Analytics Professional Certificate <span class="cert-by">in progress</span></li>
+              <li>Foundations: Data, Data, Everywhere</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <div class="contact-grid">
+          <h2 id="contact-h">Contact</h2>
+          <p class="contact-line">Open to machine learning roles and good conversations about making models faster.</p>
+          <ul class="contact-links">
+            <li>
+              <a href="https://www.linkedin.com/in/emmanuel-musa-935a59178/" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="4.9" cy="4.9" r="1" fill="currentColor"/><path d="M4.9 7.2v4.6M7.8 11.8V7.2M7.8 9.2c0-1.2.8-2 1.8-2s1.6.7 1.6 1.9v2.7" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+                <span class="contact-name">LinkedIn</span>
+                <span class="contact-addr">linkedin.com/in/emmanuel-musa-935a59178</span>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/EmmanuelMusa" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                <span class="contact-name">GitHub</span>
+                <span class="contact-addr">github.com/EmmanuelMusa</span>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-row">
+      <p>Emmanuel Musa. Toronto, Ontario, Canada.</p>
+      <p>This page is plain HTML, CSS and JavaScript. The network and the n-gram model on it run in your browser.</p>
+      <p><a href="#top">Back to the top</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/hero.js"></script>
+  <script type="module" src="assets/js/predictor.js"></script>
+</body>
+</html>
