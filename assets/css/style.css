@@ -31,7 +31,11 @@
   --snacks-1: #3350e0;       /* Snacks for Thoughts: royal blue */
   --snacks-2: #17b86a;       /* green */
   --snacks-3: #ffc800;       /* yellow */
+  --sage: #a9d8b6;           /* Snacks for Thoughts, second version: text accent */
+  --snacks2-1: #1f5a3c;      /* its dark green, for glow and rules */
+  --snacks2-2: #ebe7dc;      /* its warm off-white, for glow and rules */
   --hub-2: #1b74b8;          /* NGO Hub: deep blue */
+  --portal-1: #e0263a;       /* Seven Star Portal: its interface red. Glow and rules only, not text */
   --field-warm: #ff982a;     /* hero decision field, class 1 side */
   --field-cool: #3d9fe3;     /* hero decision field, class 0 side */
   --shade: #050b12;          /* shadows and the lightbox backdrop */
@@ -449,6 +453,7 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
   content: ""; position: absolute; top: -2px; left: 0; width: 88px; height: 3px;
   background: var(--accent-grad, var(--accent));
 }
+#portal-ai { --accent-grad: linear-gradient(90deg, var(--portal-1), var(--signal)); }
 #speak-easy { --accent: var(--violet); --accent-grad: linear-gradient(90deg, var(--speak-1), var(--speak-2), var(--speak-3)); }
 #jamie { --accent: var(--teal); --accent-grad: linear-gradient(90deg, var(--jamie-1), var(--jamie-2)); }
 #next-word, #language-id { --accent: var(--data); }
@@ -577,9 +582,50 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
   .suggestions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
+/* ---------- Software showpiece: Snacks for Thoughts ---------- */
+
+.showpiece {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(26px, 3.4vw, 48px);
+  padding-top: clamp(24px, 3vw, 40px); margin-bottom: clamp(40px, 5.4vw, 80px);
+  border-top: 1px solid var(--line-2);
+}
+.showpiece-head { display: grid; gap: 14px; }
+.showpiece-head h3 {
+  font: 400 clamp(1.625rem, 1.2rem + 1.35vw, 2.5rem) / 1.08 var(--font-display);
+  letter-spacing: -0.02em; text-wrap: balance;
+}
+.showpiece-head p { color: var(--paper-2); max-width: 64ch; }
+.showpiece-head .showpiece-note { font: 400 var(--mono-s) / 1.6 var(--font-mono); font-stretch: 85%; color: var(--paper-3); }
+
+/* One block for each version of the project. Each carries its own colour. */
+.version {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px;
+  padding-top: clamp(24px, 2.8vw, 38px); border-top: 1px solid var(--line-2);
+  --accent: var(--royal);
+  --accent-grad: linear-gradient(90deg, var(--snacks-1) 0 34%, var(--snacks-2) 34% 67%, var(--snacks-3) 67%);
+}
+.version::before {
+  content: ""; position: absolute; top: -2px; left: 0; width: 88px; height: 3px;
+  background: var(--accent-grad);
+}
+.version-2 { --accent: var(--sage); --accent-grad: linear-gradient(90deg, var(--snacks2-1) 0 60%, var(--snacks2-2) 60%); }
+.version-meta { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.version-title { margin: 0; font: 400 1.5rem / 1.15 var(--font-display); letter-spacing: -0.01em; color: var(--paper); }
+.version-meta > p { font-size: 0.9375rem; line-height: 1.5; color: var(--paper-2); max-width: 52ch; }
+.version-links { display: flex; flex-wrap: wrap; gap: 4px 20px; font: 400 var(--mono-m) / 1 var(--font-mono); font-stretch: 85%; color: var(--paper); }
+.version-links a { display: inline-block; padding-block: 5px; }
+.plate-set-snacks2 { --accent: var(--sage); --accent-grad: linear-gradient(100deg, var(--snacks2-1), var(--snacks2-1) 55%, var(--snacks2-2)); }
+
+@media (min-width: 900px) {
+  .showpiece-head, .version { grid-template-columns: var(--margin-col) minmax(0, 1fr); column-gap: clamp(36px, 3.6vw, 64px); }
+  .showpiece-head h3 { grid-column: 1; grid-row: 1 / span 2; }
+  .showpiece-head p { grid-column: 2; }
+  .version-meta { position: sticky; top: calc(var(--head-h) + 24px); align-self: start; }
+}
+
 /* ---------- Software ledger ---------- */
 
-.ledger { display: grid; gap: 1px; grid-auto-flow: dense; background: var(--line-2); border: 1px solid var(--line-2); }
+.ledger { display: grid; gap: 1px; background: var(--line-2); border: 1px solid var(--line-2); }
 .item {
   position: relative; min-width: 0; padding: clamp(22px, 2.4vw, 34px);
   display: flex; flex-direction: column; gap: 12px;
@@ -589,36 +635,27 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
 /* Each card carries a short tab of colour on its top edge. */
 .item::before {
   content: ""; position: absolute; top: -1px; left: clamp(22px, 2.4vw, 34px); width: 44px; height: 3px;
-  background: var(--card-grad, var(--card));
+  background: var(--card);
 }
-.item:nth-child(1), .item:nth-child(3) { --card: var(--mint); }
-.item:nth-child(4) { --card: var(--signal); }
-.item:nth-child(5) { --card: var(--data); }
-.item-feature { --card-grad: linear-gradient(90deg, var(--snacks-1) 0 34%, var(--snacks-2) 34% 67%, var(--snacks-3) 67%); }
+.item:nth-child(1), .item:nth-child(2) { --card: var(--mint); }
+.item:nth-child(3) { --card: var(--signal); }
+.item:nth-child(4) { --card: var(--data); }
 .item h3 { color: var(--paper); font-size: 1.5rem; text-wrap: balance; }
 .item-for, .item-note { font: 400 var(--mono-s) / 1.6 var(--font-mono); font-stretch: 85%; color: var(--paper-3); }
 .item p:not(.item-for):not(.item-note) { font-size: 0.9375rem; line-height: 1.55; max-width: 60ch; }
 .item .stack { margin-top: auto; padding-top: 6px; }
 .item-links { display: flex; gap: 22px; font: 400 var(--mono-m) / 1 var(--font-mono); font-stretch: 85%; color: var(--paper); }
 .item-links a { display: inline-block; padding-block: 6px; }
-.item-text { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.item-feature { gap: clamp(20px, 2.4vw, 30px); }
-.item-feature .item-text .stack { margin-top: 0; }
 
+/* Five cards: two and two with the last across on a tablet, three over two on a desktop. */
 @media (min-width: 760px) {
   .ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .item-feature { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); align-items: start; }
   .item:last-child { grid-column: 1 / -1; }
 }
 @media (min-width: 1280px) {
-  .ledger { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .item-feature { grid-column: 2 / span 2; grid-row: 1 / span 2; display: flex; flex-direction: column; align-items: stretch; }
-  .item-feature .plates { order: -1; }
-  .item:last-child { grid-column: auto; }
-}
-@media (min-width: 1560px) {
-  .item-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); align-items: start; }
-  .item-feature .plates { order: 0; }
+  .ledger { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .item, .item:last-child { grid-column: span 2; }
+  .item:nth-child(n + 4) { grid-column: span 3; }
 }
 
 /* ---------- Project management ---------- */
@@ -728,6 +765,7 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
   background: var(--accent-grad, var(--accent)); filter: blur(64px); opacity: 0.3;
 }
 .plate-set-snacks { --accent: var(--royal); --accent-grad: linear-gradient(100deg, var(--snacks-1), var(--snacks-1) 45%, var(--snacks-2) 75%, var(--snacks-3)); }
+.version-meta .sheet dd { font-size: 0.875rem; }
 .plate-set-hub { --accent: var(--hub); --accent-grad: linear-gradient(100deg, var(--hub-2), var(--hub)); }
 .plate-set-title i { color: var(--accent); }
 
@@ -769,6 +807,20 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
 .shot-img img { width: 100%; height: auto; border-radius: 3px; background: var(--ink); }
 .shot-crop .shot-img img { aspect-ratio: 3 / 2; object-fit: cover; object-position: 100% 50%; }
 
+/* A plate with its own caption, for sets where each screen keeps its note beside it. */
+.plate { display: grid; gap: 10px; align-content: start; min-width: 0; margin: 0; }
+.plate-cap { max-width: 64ch; padding-inline: 2px; font-size: 0.8125rem; line-height: 1.5; color: var(--paper-2); }
+.plate-lead .plate-cap { font-size: 0.9375rem; color: var(--paper); }
+.plate-set > .plates-note { max-width: 86ch; font-size: 0.875rem; line-height: 1.5; }
+.plate-group { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; min-width: 0; }
+.plate-group + .plate-group { margin-top: 12px; }
+.plate-group-title {
+  display: flex; align-items: center; gap: 10px;
+  font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: var(--paper);
+}
+.plate-group-title::before { content: ""; flex: none; width: 28px; height: 2px; background: var(--accent-grad, var(--accent)); }
+.plate-set-portal .plate-lead .shot { border-color: var(--accent); }
+
 .plate-notes { display: grid; gap: 14px; align-content: start; min-width: 0; font-size: 0.875rem; line-height: 1.5; color: var(--paper-2); }
 .plates-note { padding-left: 12px; border-left: 2px solid var(--accent); color: var(--paper); }
 .plate-notes dl { display: grid; gap: 12px; }
@@ -781,7 +833,8 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
   padding: 8px 4px 24px; margin-inline: -4px;
   scrollbar-width: thin; scrollbar-color: var(--line-3) transparent;
 }
-.shots-strip > .shot { flex: 0 0 86%; scroll-snap-align: center; }
+.shots-strip > .shot, .shots-strip > .plate { flex: 0 0 86%; scroll-snap-align: center; }
+.shots-strip > .shot-wide { align-self: center; }
 
 /* Speak Easy on a phone: the tall window, with the pill laid over its corner and the strip beneath. */
 .plate-set-speak .shot-settings { width: min(68%, 300px); }
@@ -790,24 +843,36 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
 
 .plate-set-chat .shot { max-width: 620px; }
 
-@container plates (min-width: 780px) {
-  .plate-set-jamie .shots-strip { display: contents; }
-  .plate-set-jamie .shots-strip > .shot { flex: none; }
+@container plates (min-width: 560px) {
+  /* Seven Star Portal: the assistant takes a two by two cell, the other five wrap round it
+     in order, two down the right and three along the foot. */
+  .plate-set-portal .shots {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 16px;
+    padding: 0; margin: 0; overflow: visible; scroll-snap-type: none;
+  }
+  .plate-set-portal .plate-lead { grid-column: 1 / span 2; grid-row: 1 / span 2; }
 
-  /* JAMIE: the Ask screen leads with its note beside it. Three more step down beneath,
-     each with its own note under it. The caption's parts are placed one by one. */
-  .plate-set-jamie { grid-template-columns: repeat(24, minmax(0, 1fr)); grid-template-rows: auto auto 1fr auto auto; gap: 0; }
-  .plate-set-jamie .plate-set-title { grid-column: 1 / -1; margin-bottom: 18px; }
-  .plate-set-jamie .plate-notes, .plate-set-jamie .plate-notes dl { display: contents; }
-  .plate-set-jamie .shot-lead { grid-column: 1 / 19; grid-row: 2 / span 2; }
-  .plate-set-jamie .plates-note { grid-column: 19 / 25; grid-row: 2; margin: 2px 0 18px 22px; }
-  .plate-set-jamie dl > div:nth-child(1) { grid-column: 19 / 25; grid-row: 3; margin-left: 22px; }
-  .plate-set-jamie .shot:nth-child(2) { grid-column: 3 / 10; grid-row: 4; margin: -17% 7px 0; z-index: 2; }
-  .plate-set-jamie .shot:nth-child(3) { grid-column: 10 / 17; grid-row: 4; margin: -9% 7px 0; z-index: 3; }
-  .plate-set-jamie .shot:nth-child(4) { grid-column: 17 / 24; grid-row: 4; margin: 14px 7px 0; z-index: 4; }
-  .plate-set-jamie dl > div:nth-child(2) { grid-column: 3 / 10; grid-row: 5; margin: calc(-17% - 2px) 9px 0; }
-  .plate-set-jamie dl > div:nth-child(3) { grid-column: 10 / 17; grid-row: 5; margin: calc(-9% - 2px) 9px 0; }
-  .plate-set-jamie dl > div:nth-child(4) { grid-column: 17 / 24; grid-row: 5; margin: 12px 9px 0; }
+  /* Snacks for Thoughts, first version: the home page and its three-step section share the top row,
+     the three inner pages sit beneath. */
+  .plate-set-snacks .shots {
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px 16px;
+    padding: 0; margin: 0; overflow: visible; scroll-snap-type: none;
+  }
+  .plate-set-snacks .plate { grid-column: span 4; }
+  .plate-set-snacks .plate:nth-child(1) { grid-column: span 7; }
+  .plate-set-snacks .plate:nth-child(2) { grid-column: span 5; margin-top: 34px; }
+
+  /* Second version: four screens fanned in a row, each laid over the one before. */
+  .plate-set-snacks2 .shots {
+    display: grid; grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 0;
+    padding: 0; margin: 0; overflow: visible; scroll-snap-type: none;
+  }
+  .plate-set-snacks2 .shot { grid-row: 1; }
+  .plate-set-snacks2 .shot:nth-child(1) { grid-column: 1 / 9; }
+  .plate-set-snacks2 .shot:nth-child(2) { grid-column: 5 / 13; margin-top: 20px; z-index: 2; }
+  .plate-set-snacks2 .shot:nth-child(3) { grid-column: 9 / 17; z-index: 3; }
+  .plate-set-snacks2 .shot:nth-child(4) { grid-column: 13 / 21; margin-top: 20px; z-index: 4; }
+  .plate-set-snacks2 .plate-notes dl { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
 }
 @container plates (min-width: 640px) {
   /* Speak Easy: the settings window stands at the left, the pill and the strip float beside it. */
@@ -819,18 +884,48 @@ h4 { font: 400 var(--mono-s) / 1.3 var(--font-mono); font-stretch: 85%; color: v
   .plate-set-speak .plate-notes { grid-column: 2; grid-row: 3; padding: 30px 0 30px 11%; max-width: 62ch; }
   .plate-set-speak .shot-strip { grid-column: 2; grid-row: 4; align-self: end; width: min(100%, 660px); margin: 0 0 26px -9%; }
 
-  /* NGO Hub: two pages, the library laid over the home page. */
+  /* NGO Hub: three pages step down to the right, home at the back and the library in front.
+     The wide Community Hub strip lies across their foot. */
+  .plate-set-hub .shots {
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0;
+    padding: 0; margin: 0; overflow: visible; scroll-snap-type: none;
+  }
+  .plate-set-hub .shot:nth-child(3) { grid-column: 1 / 7; grid-row: 1; }
+  .plate-set-hub .shot:nth-child(2) { grid-column: 4 / 10; grid-row: 1; margin-top: 12%; z-index: 2; }
+  .plate-set-hub .shot:nth-child(1) { grid-column: 7 / 13; grid-row: 1; margin-top: 24%; z-index: 3; }
+  .plate-set-hub .shot:nth-child(4) { grid-column: 1 / 9; grid-row: 2; margin-top: -10%; z-index: 4; align-self: start; }
+  .plate-set-hub .plate-notes dl { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+}
+@container plates (min-width: 780px) {
+  /* JAMIE: two groups. The AI screens sit side by side with Ask JAMIE the larger.
+     The five tracking screens are laid like bricks, three then two. */
+  .plate-set-jamie .shots { display: grid; gap: 24px 16px; padding: 0; margin: 0; overflow: visible; scroll-snap-type: none; }
+  .plate-group-a .shots { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .plate-group-a .plate:nth-child(1) { grid-column: 1 / 9; }
+  .plate-group-a .plate:nth-child(2) { grid-column: 9 / 13; margin-top: 44px; }
+  .plate-group-b .shots { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .plate-group-b .plate { grid-column: span 2; }
+  .plate-group-b .plate:nth-child(4) { grid-column: 2 / span 2; }
+}
+@container plates (min-width: 900px) {
   .plate-set-hub { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); column-gap: clamp(24px, 3.6vw, 64px); row-gap: 14px; grid-template-rows: auto 1fr; }
   .plate-set-hub .plate-set-title { grid-column: 1; grid-row: 1; }
   .plate-set-hub .plate-notes { grid-column: 1; grid-row: 2; }
-  .plate-set-hub .shots { grid-column: 2; grid-row: 1 / span 2; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0; padding: 0; margin: 0; overflow: visible; scroll-snap-type: none; }
-  .plate-set-hub .shot:nth-child(1) { grid-column: 5 / 13; grid-row: 1; margin-top: 17%; z-index: 2; }
-  .plate-set-hub .shot:nth-child(2) { grid-column: 1 / 9; grid-row: 1; align-self: start; }
+  .plate-set-hub .plate-notes dl { grid-template-columns: minmax(0, 1fr); }
+  .plate-set-hub .shots { grid-column: 2; grid-row: 1 / span 2; }
 }
 @container plates (min-width: 1180px) {
-  .plate-set-jamie .shot-lead { grid-column: 1 / 17; }
-  .plate-set-jamie .plates-note { grid-column: 17 / 25; margin-left: 34px; max-width: 46ch; }
-  .plate-set-jamie dl > div:nth-child(1) { grid-column: 17 / 25; margin-left: 34px; max-width: 46ch; }
+  .plate-set-portal, .plate-set-jamie, .plate-set-snacks, .plate-set-snacks2 { max-width: 1320px; }
+  /* On a wide screen the home page takes a two by two cell and the four others fill the right. */
+  .plate-set-snacks .shots { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .plate-set-snacks .plate, .plate-set-snacks .plate:nth-child(2) { grid-column: auto; margin-top: 0; }
+  .plate-set-snacks .plate:nth-child(1) { grid-column: 1 / span 2; grid-row: 1 / span 2; }
+  .plate-set-snacks2 .plate-notes dl { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .plate-group-a .plate:nth-child(1) { grid-column: 1 / 8; }
+  .plate-group-a .plate:nth-child(2) { grid-column: 8 / 13; }
+  .plate-group-b .shots { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .plate-group-b .plate, .plate-group-b .plate:nth-child(4) { grid-column: auto; }
+  .plate-group-b .plate:nth-child(even) { margin-top: 22px; }
   .plate-set-speak { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); max-width: 1140px; }
   .plate-set-speak .shot-pill { margin-right: 4%; }
 }
