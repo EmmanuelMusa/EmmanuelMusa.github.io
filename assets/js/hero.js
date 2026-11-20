@@ -40,11 +40,13 @@ function start(root) {
     line: hex('--line-2', '#2d465e'),
     signal: hex('--signal', '#ffb13c'),
     data: hex('--data', '#7cbcd6'),
+    fieldWarm: hex('--field-warm', '#ff982a'),
+    fieldCool: hex('--field-cool', '#3d9fe3'),
   };
   const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
   const INK = rgb(colour.ink);
-  const WARM = rgb(colour.signal);
-  const COOL = rgb(colour.data);
+  const WARM = rgb(colour.fieldWarm);
+  const COOL = rgb(colour.fieldCool);
   const monoFont = (px) => `${px}px "Martian Mono", Consolas, monospace`;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -123,7 +125,7 @@ function start(root) {
         fieldValues[j * N + i] = p;
         const t = p * 2 - 1;
         const tint = t >= 0 ? WARM : COOL;
-        const amount = Math.pow(Math.abs(t), 0.85) * (t >= 0 ? 0.3 : 0.32);
+        const amount = Math.pow(Math.abs(t), 0.85) * (t >= 0 ? 0.34 : 0.36);
         const k = (j * N + i) * 4;
         pixels[k] = INK[0] + (tint[0] - INK[0]) * amount;
         pixels[k + 1] = INK[1] + (tint[1] - INK[1]) * amount;

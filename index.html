@@ -44,6 +44,15 @@
       <marker id="arrow-signal" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
         <path d="M1.5 1.5 8.5 5 1.5 8.5"/>
       </marker>
+      <marker id="arrow-alt" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M1.5 1.5 8.5 5 1.5 8.5"/>
+      </marker>
+      <marker id="arrow-learn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M1.5 1.5 8.5 5 1.5 8.5"/>
+      </marker>
+      <marker id="arrow-pass" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M1.5 1.5 8.5 5 1.5 8.5"/>
+      </marker>
     </defs>
   </svg>
 
@@ -270,8 +279,8 @@
                 <text class="t" x="264" y="302" text-anchor="middle">Gemini adapter</text>
                 <rect class="node" x="536" y="276" width="200" height="42" rx="2"/>
                 <text class="t" x="636" y="302" text-anchor="middle">OpenAI-compatible adapter</text>
-                <path class="wire wire-dash" d="M364 297H533"/>
-                <text class="t-note" x="449" y="288" text-anchor="middle">fails over automatically</text>
+                <path class="wire wire-alt" d="M364 297H533"/>
+                <text class="t-note t-alt" x="449" y="288" text-anchor="middle">fails over automatically</text>
               </svg>
               <svg class="dg dg-tall" viewBox="0 0 340 590" role="img" aria-labelledby="f2t-t f2t-d">
                 <title id="f2t-t">The agent tool loop and the provider layer</title>
@@ -300,13 +309,13 @@
                 <text class="t-note" x="24" y="445">Provider-agnostic model layer</text>
                 <rect class="node" x="24" y="456" width="292" height="40" rx="2"/>
                 <text class="t" x="170" y="481" text-anchor="middle">Gemini adapter</text>
-                <path class="wire wire-dash" d="M170 496V529"/>
-                <text class="t-note" x="180" y="517">fails over automatically</text>
+                <path class="wire wire-alt" d="M170 496V529"/>
+                <text class="t-note t-alt" x="180" y="517">fails over automatically</text>
                 <rect class="node" x="24" y="532" width="292" height="40" rx="2"/>
                 <text class="t" x="170" y="557" text-anchor="middle">OpenAI-compatible adapter</text>
               </svg>
             </div>
-            <figcaption>A question goes to the model, the model picks a tool, the read-only tool runs on live portal data and the result returns to the model, which answers. Below it, the provider layer with automatic failover.</figcaption>
+            <figcaption>A question goes to the model, the model picks a tool, the read-only tool runs on live portal data and the result returns to the model, which answers. Below it, the provider layer with automatic failover. Amber marks the tool loop and coral marks the failover.</figcaption>
           </figure>
         </article>
 
@@ -368,30 +377,30 @@
                 <path class="wire" d="M228 94H249"/>
                 <path class="wire" d="M432 94H453"/>
                 <path class="wire" d="M636 94H657"/>
-                <path class="wire wire-dash" d="M342 64V24H728V61"/>
-                <text class="t-note" x="535" y="16" text-anchor="middle">if Ollama is down or slow, a local clean-up runs</text>
+                <path class="wire wire-alt" d="M342 64V24H728V61"/>
+                <text class="t-note t-alt" x="535" y="16" text-anchor="middle">if Ollama is down or slow, a local clean-up runs</text>
                 <text class="t-note" x="494" y="156">guard rejects a paraphrase</text>
                 <text class="t-note" x="494" y="170">and delivers verbatim text</text>
-                <rect class="node" x="660" y="250" width="136" height="56" rx="2"/>
+                <rect class="node node-learn" x="660" y="250" width="136" height="56" rx="2"/>
                 <text class="t" x="728" y="283" text-anchor="middle">Corrections</text>
-                <rect class="node" x="456" y="250" width="180" height="56" rx="2"/>
+                <rect class="node node-learn" x="456" y="250" width="180" height="56" rx="2"/>
                 <text class="t" x="546" y="274" text-anchor="middle">Few-shot examples</text>
                 <text class="t-sub" x="546" y="292" text-anchor="middle">ranked with TF-IDF</text>
-                <rect class="node" x="252" y="250" width="180" height="56" rx="2"/>
+                <rect class="node node-learn" x="252" y="250" width="180" height="56" rx="2"/>
                 <text class="t" x="342" y="274" text-anchor="middle">Voice dataset</text>
                 <text class="t-sub" x="342" y="292" text-anchor="middle">audio and transcript pairs</text>
-                <rect class="node" x="36" y="250" width="192" height="56" rx="2"/>
+                <rect class="node node-learn" x="36" y="250" width="192" height="56" rx="2"/>
                 <text class="t" x="132" y="274" text-anchor="middle">Learned vocabulary</text>
                 <text class="t-sub" x="132" y="292" text-anchor="middle">misheard names and jargon</text>
-                <path class="wire" d="M728 124V247"/>
-                <path class="wire" d="M728 306V336H546V309"/>
-                <path class="wire" d="M546 336H342V309"/>
-                <path class="wire" d="M342 336H132V309"/>
-                <text class="t-note" x="437" y="356" text-anchor="middle">corrections feed all three</text>
-                <path class="wire wire-key" d="M476 250V139"/>
-                <text class="t-note" x="486" y="214">added to the clean-up prompt</text>
-                <path class="wire wire-dash" d="M342 250V127"/>
-                <text class="t-note" x="332" y="200" text-anchor="end">for a later LoRA fine-tune</text>
+                <path class="wire wire-learn" d="M728 124V247"/>
+                <path class="wire wire-learn" d="M728 306V336H546V309"/>
+                <path class="wire wire-learn" d="M546 336H342V309"/>
+                <path class="wire wire-learn" d="M342 336H132V309"/>
+                <text class="t-note t-learn" x="437" y="356" text-anchor="middle">corrections feed all three</text>
+                <path class="wire wire-learn" d="M476 250V139"/>
+                <text class="t-note t-learn" x="486" y="214">added to the clean-up prompt</text>
+                <path class="wire wire-learn wire-dash" d="M342 250V127"/>
+                <text class="t-note t-learn" x="332" y="200" text-anchor="end">for a later LoRA fine-tune</text>
               </svg>
               <svg class="dg dg-tall" viewBox="0 0 340 734" role="img" aria-labelledby="f3t-t f3t-d">
                 <title id="f3t-t">The Speak Easy dictation pipeline</title>
@@ -416,30 +425,60 @@
                 <path class="wire" d="M108 346V371"/>
                 <rect class="node" x="10" y="374" width="196" height="44" rx="2"/>
                 <text class="t" x="108" y="401" text-anchor="middle">Text at cursor</text>
-                <path class="wire wire-dash" d="M206 178H228V396H209"/>
-                <text class="t-sub" x="238" y="270">if Ollama is down</text>
-                <text class="t-sub" x="238" y="284">or slow, a local</text>
-                <text class="t-sub" x="238" y="298">clean-up runs</text>
-                <path class="wire" d="M108 418V451"/>
-                <rect class="node" x="10" y="454" width="196" height="44" rx="2"/>
+                <path class="wire wire-alt" d="M206 178H228V396H209"/>
+                <text class="t-sub t-alt" x="238" y="270">if Ollama is down</text>
+                <text class="t-sub t-alt" x="238" y="284">or slow, a local</text>
+                <text class="t-sub t-alt" x="238" y="298">clean-up runs</text>
+                <path class="wire wire-learn" d="M108 418V451"/>
+                <rect class="node node-learn" x="10" y="454" width="196" height="44" rx="2"/>
                 <text class="t" x="108" y="481" text-anchor="middle">Corrections</text>
-                <path class="wire" d="M24 498V546H41"/>
-                <path class="wire" d="M24 546V614H41"/>
-                <path class="wire" d="M24 614V688H41"/>
-                <rect class="node" x="44" y="522" width="286" height="50" rx="2"/>
+                <path class="wire wire-learn" d="M24 498V546H41"/>
+                <path class="wire wire-learn" d="M24 546V614H41"/>
+                <path class="wire wire-learn" d="M24 614V688H41"/>
+                <rect class="node node-learn" x="44" y="522" width="286" height="50" rx="2"/>
                 <text class="t" x="58" y="543">Few-shot examples</text>
                 <text class="t-sub" x="58" y="560">ranked with TF-IDF, added to the prompt</text>
-                <rect class="node" x="44" y="590" width="286" height="50" rx="2"/>
+                <rect class="node node-learn" x="44" y="590" width="286" height="50" rx="2"/>
                 <text class="t" x="58" y="611">Learned vocabulary</text>
                 <text class="t-sub" x="58" y="628">misheard names and jargon</text>
-                <rect class="node" x="44" y="658" width="286" height="66" rx="2"/>
+                <rect class="node node-learn" x="44" y="658" width="286" height="66" rx="2"/>
                 <text class="t" x="58" y="679">Voice dataset</text>
                 <text class="t-sub" x="58" y="696">audio and transcript pairs,</text>
                 <text class="t-sub" x="58" y="710">for a later LoRA fine-tune of Whisper</text>
               </svg>
             </div>
-            <figcaption>Hold the hotkey, speak, release. Speech becomes text while the key is still held, a local LLM cleans it up under a divergence guard, and the text lands at the cursor. The lower loop shows where corrections go.</figcaption>
+            <figcaption>Hold the hotkey, speak, release. Speech becomes text while the key is still held, a local LLM cleans it up under a divergence guard, and the text lands at the cursor. The lower loop shows where corrections go. Coral is the fallback path. Green is the loop that learns from corrections.</figcaption>
           </figure>
+          <div class="plates">
+            <figure class="plate-set plate-set-speak" aria-labelledby="plates-speak-t">
+              <p class="fig-label plate-set-title" id="plates-speak-t"><i>Plates 1 to 3</i> Speak Easy on screen</p>
+              <div class="shots">
+                <a class="shot shot-settings" href="assets/shots/speakeasy-settings.webp" data-caption="cap-speak-settings">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 1</i> Settings window</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/speakeasy-settings.webp" width="768" height="1748" loading="lazy" decoding="async" alt="SpeakEasy dictation settings window on a dark theme. Panels for the dictation key (F9), the speech engine (whisper, model small.en), clean-up with a local AI model (llama3.1:8b) and behaviour options, with Cancel and Save buttons at the bottom."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+                <a class="shot shot-pill" href="assets/shots/speakeasy-pill.webp" data-caption="cap-speak-pill">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 2</i> Recording pill</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/speakeasy-pill.webp" width="900" height="312" loading="lazy" decoding="async" alt="A small dark pill holding a white waveform of upright bars, taller in the middle, on a plain grey backdrop."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+                <a class="shot shot-strip" href="assets/shots/speakeasy-feedback.webp" data-caption="cap-speak-feedback">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 3</i> Feedback strip</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/speakeasy-feedback.webp" width="860" height="182" loading="lazy" decoding="async" alt="A dark strip showing the cleaned text So let's ship the emoji thing today, five empty rating stars and a Correct it link."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+              </div>
+              <figcaption class="plate-notes">
+                <p class="plates-note">Rendered from the app's own interface code.</p>
+                <dl>
+                  <div><dt><i>Plate 1</i> Settings window</dt><dd id="cap-speak-settings">The settings window, showing the dictation key, the speech engine and Whisper model, the clean-up model and the behaviour options.</dd></div>
+                  <div><dt><i>Plate 2</i> Recording pill</dt><dd id="cap-speak-pill">The on-screen pill showing its waveform while recording. The grey around it is a neutral backdrop, not part of the app.</dd></div>
+                  <div><dt><i>Plate 3</i> Feedback strip</dt><dd id="cap-speak-feedback">The training-mode feedback strip, with the cleaned text, a five-star rating and a "Correct it" link.</dd></div>
+                </dl>
+              </figcaption>
+            </figure>
+          </div>
         </article>
 
         <!-- Entry: JAMIE -->
@@ -507,9 +546,9 @@
                 <rect class="node" x="694" y="168" width="102" height="56" rx="2"/>
                 <text class="t" x="745" y="192" text-anchor="middle">Plain list</text>
                 <text class="t-sub" x="745" y="209" text-anchor="middle">fallback</text>
-                <path class="wire wire-key" d="M668 116H681V56H691"/>
-                <path class="wire" d="M668 136H681V196H691"/>
-                <text class="t-note" x="745" y="18" text-anchor="middle">all backed</text>
+                <path class="wire wire-pass" d="M668 116H681V56H691"/>
+                <path class="wire wire-alt" d="M668 136H681V196H691"/>
+                <text class="t-note t-pass" x="745" y="18" text-anchor="middle">all backed</text>
                 <path class="db" d="M350 196v36c0 5 27 9 60 9s60-4 60-9v-36"/>
                 <ellipse class="db" cx="410" cy="196" rx="60" ry="9"/>
                 <text class="t-sub" x="410" y="228" text-anchor="middle">database</text>
@@ -517,7 +556,7 @@
                 <path class="wire wire-dot" d="M470 212H594V159"/>
                 <text class="t-note" x="482" y="230">numbers, dates and status</text>
                 <text class="t-note" x="482" y="244">words checked against it</text>
-                <text class="t-note" x="745" y="242" text-anchor="middle">not backed</text>
+                <text class="t-note t-alt" x="745" y="242" text-anchor="middle">not backed</text>
               </svg>
               <svg class="dg dg-tall" viewBox="0 0 340 456" role="img" aria-labelledby="f4t-t f4t-d">
                 <title id="f4t-t">The Ask JAMIE answer check</title>
@@ -542,18 +581,54 @@
                 <text class="t-sub" x="110" y="306" text-anchor="middle">numbers, dates and status words</text>
                 <text class="t-sub" x="110" y="320" text-anchor="middle">compared with the data</text>
                 <path class="wire wire-dot" d="M287 218V300H213"/>
-                <path class="wire wire-key" d="M110 336V362H85V397"/>
-                <path class="wire" d="M110 336V362H255V397"/>
-                <text class="t-note" x="77" y="386" text-anchor="end">all backed</text>
-                <text class="t-note" x="263" y="386">not backed</text>
+                <path class="wire wire-pass" d="M110 336V362H85V397"/>
+                <path class="wire wire-alt" d="M110 336V362H255V397"/>
+                <text class="t-note t-pass" x="77" y="386" text-anchor="end">all backed</text>
+                <text class="t-note t-alt" x="263" y="386">not backed</text>
                 <rect class="node" x="10" y="400" width="150" height="46" rx="2"/>
                 <text class="t" x="85" y="428" text-anchor="middle">Answer</text>
                 <rect class="node" x="180" y="400" width="150" height="46" rx="2"/>
                 <text class="t" x="255" y="428" text-anchor="middle">Plain list fallback</text>
               </svg>
             </div>
-            <figcaption>The model writes a lookup, JAMIE runs it read-only, and the answer check compares each number and date to the data. The user then gets either the answer or a plain list fallback.</figcaption>
+            <figcaption>The model writes a lookup, JAMIE runs it read-only, and the answer check compares each number and date to the data. The user then gets either the answer or a plain list fallback. Teal is a checked answer. Coral is the fallback.</figcaption>
           </figure>
+          <div class="plates">
+            <figure class="plate-set plate-set-jamie" aria-labelledby="plates-jamie-t">
+              <p class="fig-label plate-set-title" id="plates-jamie-t"><i>Plates 4 to 7</i> JAMIE on screen</p>
+              <div class="shots shots-strip">
+                <a class="shot shot-lead" href="assets/shots/jamie-ask.webp" data-caption="cap-jamie-ask">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 4</i> Ask JAMIE</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/jamie-ask.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="Ask JAMIE chat screen in a light theme. The question reads Which sources are getting me the most interviews? The answer lists recruiter 1 of 1, linkedin 2 of 3 and referral 1 of 2, says the numbers are small, then shows a Suggestions box and a How I got this link."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+                <a class="shot" href="assets/shots/jamie-dashboard.webp" data-caption="cap-jamie-dashboard">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 5</i> Dashboard</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/jamie-dashboard.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="JAMIE Dashboard. A row of summary cards for applications, response rate, interviews, offers and average time to reply sits above a bar chart titled Applications per week and a set of bars titled Where your applications end up."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+                <a class="shot" href="assets/shots/jamie-applications.webp" data-caption="cap-jamie-applications">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 6</i> Applications</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/jamie-applications.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="JAMIE Applications table. Rows of invented companies with columns for role, status, source, date applied and time since applying. Status labels include Saved, Applied, Assessment, Interview, Rejected and Ghosted."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+                <a class="shot" href="assets/shots/jamie-progress.webp" data-caption="cap-jamie-progress">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 7</i> Progress</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/jamie-progress.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="JAMIE Progress page. Cards for level, streak, shields, daily target and points this week sit above a grid of trophies grouped as Momentum, Craft and Breakthroughs."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+              </div>
+              <figcaption class="plate-notes">
+                <p class="plates-note">The real app, running on a made-up job search. The companies and applications are invented.</p>
+                <dl>
+                  <div><dt><i>Plate 4</i> Ask JAMIE</dt><dd id="cap-jamie-ask">Ask JAMIE answering "Which sources are getting me the most interviews?" The answer came from a local model running through Ollama. It lists the numbers, warns that the sample is small, and offers suggestions and a "How I got this" link.</dd></div>
+                  <div><dt><i>Plate 5</i> Dashboard</dt><dd id="cap-jamie-dashboard">The Dashboard, with applications per week and where applications end up.</dd></div>
+                  <div><dt><i>Plate 6</i> Applications</dt><dd id="cap-jamie-applications">The Applications table with status, source and dates.</dd></div>
+                  <div><dt><i>Plate 7</i> Progress</dt><dd id="cap-jamie-progress">The Progress page with level, streak and trophies.</dd></div>
+                </dl>
+              </figcaption>
+            </figure>
+          </div>
         </article>
 
         <!-- Entry: next-word prediction -->
@@ -657,6 +732,22 @@
                 <li>Served with Flask inside the company site's front end.</li>
               </ul>
             </div>
+            <div class="plates">
+              <figure class="plate-set plate-set-chat">
+                <div class="shots">
+                  <a class="shot shot-crop" href="assets/shots/chatbot.webp" data-caption="cap-chatbot">
+                    <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 8</i> Chat support panel</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                    <span class="shot-img"><img src="assets/shots/chatbot.webp" width="1600" height="897" loading="lazy" decoding="async" alt="A company website with the headline Your Research Partner in Africa over a classroom photo. At the lower right a yellow Chat support panel is open. The bot greets the visitor on behalf of Seven Star Consultants Limited and asks what it can do."></span>
+                    <span class="sr-only">View larger.</span>
+                  </a>
+                </div>
+                <figcaption class="plate-notes">
+                  <dl>
+                    <div><dt><i>Plate 8</i> Chat support panel</dt><dd id="cap-chatbot">The chatbot answering a visitor inside the company website's front end. From the repository's own sample pictures.</dd></div>
+                  </dl>
+                </figcaption>
+              </figure>
+            </div>
           </article>
         </div>
       </div>
@@ -680,15 +771,33 @@
             <p class="item-note">Code is private.</p>
           </article>
 
-          <article class="item">
-            <h3>Snacks for Thoughts</h3>
-            <p>A platform for supporting verified school breakfast programmes in Nigeria. Donors pick a school, give, and track where the contribution goes. It has dashboards for donors, states, suppliers and verifiers, and a public transparency page.</p>
-            <ul class="stack"><li>TypeScript</li><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Recharts</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li></ul>
-            <p class="item-note">80 commits.</p>
-            <ul class="item-links">
-              <li><a class="link-out" href="https://snacksforthoughts.vercel.app" target="_blank" rel="noopener">Live site<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> for Snacks for Thoughts (opens in a new tab)</span></a></li>
-              <li><a class="link-out" href="https://github.com/EmmanuelMusa/snacksforthoughts" target="_blank" rel="noopener">Code<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> for Snacks for Thoughts (opens in a new tab)</span></a></li>
-            </ul>
+          <article class="item item-feature">
+            <div class="item-text">
+              <h3>Snacks for Thoughts</h3>
+              <p>A platform for supporting verified school breakfast programmes in Nigeria. Donors pick a school, give, and track where the contribution goes. It has dashboards for donors, states, suppliers and verifiers, and a public transparency page.</p>
+              <ul class="stack"><li>TypeScript</li><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Recharts</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li></ul>
+              <p class="item-note">80 commits.</p>
+              <ul class="item-links">
+                <li><a class="link-out" href="https://snacksforthoughts.vercel.app" target="_blank" rel="noopener">Live site<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> for Snacks for Thoughts (opens in a new tab)</span></a></li>
+                <li><a class="link-out" href="https://github.com/EmmanuelMusa/snacksforthoughts" target="_blank" rel="noopener">Code<svg class="icon icon-out" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 2.5h6v6M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="sr-only"> for Snacks for Thoughts (opens in a new tab)</span></a></li>
+              </ul>
+            </div>
+            <div class="plates">
+              <figure class="plate-set plate-set-snacks">
+                <div class="shots">
+                  <a class="shot" href="assets/shots/snacks-home.webp" data-caption="cap-snacks">
+                    <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 9</i> Home page</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                    <span class="shot-img"><img src="assets/shots/snacks-home.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Snacks for Thoughts home page. The heading PBAT FEEDS in white with Snacks for Thought in green sits over a blue-tinted photo of two smiling schoolchildren holding snack packs, above two buttons, Find Your School and Support in yellow and How It Works."></span>
+                    <span class="sr-only">View larger.</span>
+                  </a>
+                </div>
+                <figcaption class="plate-notes">
+                  <dl>
+                    <div><dt><i>Plate 9</i> Home page</dt><dd id="cap-snacks">The live home page.</dd></div>
+                  </dl>
+                </figcaption>
+              </figure>
+            </div>
           </article>
 
           <article class="item">
@@ -764,6 +873,30 @@
               <p>Quality assurance, technical documentation and knowledge transfer to the client's administrators.</p>
             </div>
           </div>
+          <div class="plates">
+            <figure class="plate-set plate-set-hub" aria-labelledby="plates-hub-t">
+              <p class="fig-label plate-set-title" id="plates-hub-t"><i>Plates 10 and 11</i> NGO Support Hub on screen</p>
+              <div class="shots shots-strip">
+                <a class="shot" href="assets/shots/ngohub-library.webp" data-caption="cap-hub-library">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 10</i> Resources library</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/ngohub-library.webp" width="1440" height="900" loading="lazy" decoding="async" alt="NGO Support Hub Resources Library page. A blue banner with the page title sits above a Categories heading, a Search library box and three category cards named Advocacy, Effective Programming and Establishing an NGO."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+                <a class="shot" href="assets/shots/ngohub-home.webp" data-caption="cap-hub-home">
+                  <span class="shot-bar"><span class="shot-ticks" aria-hidden="true"></span><span class="shot-name"><i>Plate 11</i> Home page</span><svg class="icon shot-open" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.5 4.5v-3h3M10.5 7.5v3h-3M1.5 1.5l3.4 3.4M10.5 10.5 7.1 7.1" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></span>
+                  <span class="shot-img"><img src="assets/shots/ngohub-home.webp" width="1440" height="900" loading="lazy" decoding="async" alt="NGO Support Hub home page. A menu with PLRCAP and NORCAP logos sits above a photo of a smiling woman in a green shawl, with a panel titled Expert Directory and a Discover Hub button."></span>
+                  <span class="sr-only">View larger.</span>
+                </a>
+              </div>
+              <figcaption class="plate-notes">
+                <p class="plates-note">Public pages of the platform, no sign-in.</p>
+                <dl>
+                  <div><dt><i>Plate 10</i> Resources library</dt><dd id="cap-hub-library">The resources library, with categories and a library search box.</dd></div>
+                  <div><dt><i>Plate 11</i> Home page</dt><dd id="cap-hub-home">The home page.</dd></div>
+                </dl>
+              </figcaption>
+            </figure>
+          </div>
         </article>
       </div>
     </section>
@@ -774,7 +907,7 @@
         <div class="rule" aria-hidden="true"></div>
         <header class="section-head">
           <h2 id="experience-h">Experience and education</h2>
-          <p class="legend"><span class="mark mark-work" aria-hidden="true"></span>work <span class="mark mark-study" aria-hidden="true"></span>study</p>
+          <p class="legend"><span><span class="mark mark-ml" aria-hidden="true"></span>machine learning role</span> <span><span class="mark mark-soft" aria-hidden="true"></span>software role</span> <span><span class="mark mark-study" aria-hidden="true"></span>study</span></p>
         </header>
 
         <ol class="timeline">
@@ -785,21 +918,21 @@
               <p>Master of Artificial Intelligence Design and Development.</p>
             </div>
           </li>
-          <li class="t-row t-work">
+          <li class="t-row t-work t-soft">
             <p class="t-when">January 2023 to August 2026</p>
             <div class="t-what">
               <h3>Seven-Star Consultants Limited</h3>
               <p>Software Engineer.</p>
             </div>
           </li>
-          <li class="t-row t-work">
+          <li class="t-row t-work t-ml">
             <p class="t-when">May 2022 to December 2022</p>
             <div class="t-what">
               <h3>Logitronic Systems Limited</h3>
               <p>Machine Learning Engineer.</p>
             </div>
           </li>
-          <li class="t-row t-work">
+          <li class="t-row t-work t-ml">
             <p class="t-when">February 2021 to April 2022</p>
             <div class="t-what">
               <h3>Huios Kinetics</h3>
@@ -813,7 +946,7 @@
               <p>Bachelor of Engineering, Electrical and Electronics Engineering. 4.80 out of 5.0.</p>
             </div>
           </li>
-          <li class="t-row t-work">
+          <li class="t-row t-work t-soft">
             <p class="t-when">February 2019 to August 2019</p>
             <div class="t-what">
               <h3>Abuja Electricity Distribution Company</h3>
@@ -942,8 +1075,23 @@
     </div>
   </footer>
 
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title" aria-describedby="lightbox-caption">
+    <div class="lightbox-bar">
+      <p class="lightbox-title" id="lightbox-title"></p>
+      <div class="lightbox-steps" id="lightbox-steps">
+        <button class="btn" type="button" id="lightbox-prev"><svg class="icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M7.5 2 3.5 6l4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Previous</button>
+        <p class="lightbox-count" id="lightbox-count" aria-live="polite"></p>
+        <button class="btn" type="button" id="lightbox-next">Next<svg class="icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+      </div>
+      <button class="btn btn-key" type="button" id="lightbox-close"><svg class="icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Close</button>
+    </div>
+    <div class="lightbox-stage" id="lightbox-stage"></div>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </dialog>
+
   <script type="module" src="assets/js/main.js"></script>
   <script type="module" src="assets/js/hero.js"></script>
   <script type="module" src="assets/js/predictor.js"></script>
+  <script type="module" src="assets/js/lightbox.js"></script>
 </body>
 </html>
