@@ -1,20 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found, Emmanuel Musa</title>
   <meta name="description" content="This page does not exist. Go back to the portfolio of Emmanuel Musa.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#0c1926">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=7">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          root.removeAttribute('data-theme');
+          var ground = getComputedStyle(root).getPropertyValue('--ink').trim();
+          if (ground) document.querySelector('meta[name="theme-color"]').setAttribute('content', ground);
+          document.querySelector('meta[name="color-scheme"]').setAttribute('content', 'dark');
+        }
+      } catch (error) {}
+    })();
+  </script>
 </head>
 <body>
   <main class="lost">

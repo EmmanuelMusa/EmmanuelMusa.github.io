@@ -1,4 +1,40 @@
-// Navigation, the header axis cursor, the mobile menu and the section rules.
+// Navigation, the theme switch, the header axis cursor, the mobile menu and the section rules.
+
+// ----- theme switch -----
+// Light is the default whatever the system setting: the page carries data-theme="light" from
+// the start, so it is light with JavaScript off too. A saved choice is put back by the small
+// script in the head before first paint. This keeps the two buttons, the saved choice and
+// the meta tags in step. The filled side is styled from the theme itself, in the stylesheet.
+
+const themeChoices = [...document.querySelectorAll('.theme-switch input[name="theme"]')];
+if (themeChoices.length) {
+  const root = document.documentElement;
+  const metaColour = document.querySelector('meta[name="theme-color"]');
+  const metaScheme = document.querySelector('meta[name="color-scheme"]');
+  const current = () => (root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+
+  const apply = (theme, save) => {
+    if (theme === 'light') root.setAttribute('data-theme', 'light');
+    else root.removeAttribute('data-theme');
+    themeChoices.forEach((choice) => { choice.checked = choice.value === theme; });
+    if (metaColour) metaColour.setAttribute('content', getComputedStyle(root).getPropertyValue('--ink').trim());
+    if (metaScheme) metaScheme.setAttribute('content', theme);
+    if (save) {
+      try {
+        localStorage.setItem('theme', theme);
+      } catch (error) {
+        // Storage can be blocked. The switch still works for this visit.
+      }
+    }
+  };
+
+  apply(current(), false);
+  themeChoices.forEach((choice) => {
+    choice.addEventListener('change', () => {
+      if (choice.checked) apply(choice.value === 'light' ? 'light' : 'dark', true);
+    });
+  });
+}
 
 const head = document.getElementById('site-head');
 const nav = document.getElementById('site-nav');
